@@ -8,4 +8,4 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/v1/generate-qr', [QrController::class, 'generate']);
+Route::get('/v1/generate-qr', [QrController::class, 'generate']);
